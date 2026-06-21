@@ -149,7 +149,7 @@ def handle() -> None:
                 _download_version(rollouts_0_5_format, "v" + version)
         else:
             print("master")
-            os.system(rollouts_format.format(version="master"))
+            _exec(rollouts_format.format(version="master"))
         write_info(files)
         _exec('cd ./rollouts && go run . ' + tmp_file_path)
 
